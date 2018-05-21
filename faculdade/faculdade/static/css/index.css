@@ -1,0 +1,15 @@
+body, html {
+   height: 100%;
+   font-family:'Raleway';
+   background-color: black!important;
+}
+
+.bgimg {
+   background-position: center;
+   background-size: 100% 85vh!important;
+   background-repeat: no-repeat!important;
+   background: url(/static/img/campanha-vestibular-20182-banner.png);
+   width:100%;
+   min-height: 100%;
+   line-height:6!important;
+}

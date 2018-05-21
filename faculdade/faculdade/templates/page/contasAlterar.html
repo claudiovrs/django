@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Alterar Contas</title>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/static/css/w3.css">
+      <link rel="stylesheet" href="/static/css/css.css">
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/css/menu.css">
+      <link rel="stylesheet" href="/static/css/rodape.css">
+   </head>
+   <body>
+      <form class="form-horizontal" method="POST">
+         <!-- Token -->
+         <input name="csrfmiddlewaretoken" type="hidden" value="Uu8ASKmQ3yBunpNygt4jg2JmoFfK3aNUjmd94JueO75YhBVJlFrN0fzlQVkLbU2q">
+         {% csrf_token %}
+         <div class="container" style="width: 100%; padding: 0;">
+            <div class="w3-top">
+               <div class="w3-row w3-padding w3-black">
+                  <div class="w3-col s2">
+                     <a href="/" class="w3-button w3-block w3-black">HOME</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/contas/" class="w3-button w3-block w3-black">CONTAS</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/curriculo/" class="w3-button w3-block w3-black">CURRÍCULO</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/restrito/" class="w3-button w3-block w3-black">RESTRITO</a>
+                  </div>
+                  <div class="align-login w3-col s2">
+                     <button class="btn btn-danger" style="padding-bottom:5px; border-radius:20px;">
+                        <a href="/login/" style="text-decoration: none;color:white;">Login</a>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            <div class="container" style="padding-top:80px!important;">
+               <fieldset>
+                  <!-- Form Name -->
+                  <legend>Alterar Conta</legend>
+                  
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" for="nome">Nome</label>  
+                     <div class="col-md-5">
+                        <input id="nome" name="nome" placeholder="" class="form-control input-md" required="" type="text" value={{conta.nome}}>
+                     </div>
+                  </div>
+                  
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" for="login">RA</label>  
+                     <div class="col-md-5">
+                        <input id="login" name="ra" placeholder="" class="form-control input-md" required="" type="text" value={{conta.ra}}>
+                     </div>
+                  </div>
+                  
+                  <!-- Password input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" for="senha">Senha</label>
+                     <div class="col-md-4">
+                        <input id="senha" name="senha" placeholder="" class="form-control input-md" required="" type="password" value={{conta.senha}}>
+                     </div>
+                  </div>
+                  
+                  <!-- Text input-->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" for="telefone">Telefone</label>  
+                     <div class="col-md-4">
+                        <input id="telefones" name="telefone" placeholder="" class="form-control input-md" required="" type="text" value={{conta.telefone}}>
+                     </div>
+                  </div>
+                  
+                  <!-- Button (Double) -->
+                  <div class="form-group">
+                     <label class="col-md-4 control-label" for="enviar"></label>
+                     <div class="col-md-8" style="padding-left:350px!important;">
+                        <button id="limpar" name="limpar" class="btn btn-warning">
+                           <a href="javascript:history.back();" style="text-decoration: none; color:white;">Voltar</a>
+                        </button>
+                        <button id="enviar" name="enviar" class="btn btn-success" type="submit">Enviar</button>
+                     </div>
+                  </div>
+               </fieldset>
+            </div>
+     
+            <!-- Footer -->
+            <footer class="w3-center">
+               <p><b>Powered by <a href="#" title="LocaUser" target="_blank" class="w3-hover-text-green">LocaUser</a></b></p>
+            </footer>
+         </div>
+      </form>
+   </body>
+</html>

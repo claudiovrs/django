@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Atividade Continua</title>
+      <meta charset="UTF-8">
+      <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="/static/css/w3.css">
+      <link rel="stylesheet" href="/static/css/css.css">
+      <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+      <link rel="stylesheet" href="/static/css/index.css">
+      <link rel="stylesheet" href="/static/css/menu.css">
+      <link rel="stylesheet" href="/static/css/rodape.css">
+   </head>
+   <body>
+      <form class="form-horizontal" method="GET">
+         <!-- Token -->
+         <input name="csrfmiddlewaretoken" type="hidden" value="Uu8ASKmQ3yBunpNygt4jg2JmoFfK3aNUjmd94JueO75YhBVJlFrN0fzlQVkLbU2q">
+         {% csrf_token %}
+         <div class="container" style="width: 100%; padding: 0;">
+            <!-- Links (sit on top) -->
+            <div class="w3-top">
+               <div class="w3-row w3-padding w3-black">
+                  <div class="w3-col s2">
+                     <a href="/" class="w3-button w3-block w3-black">HOME</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/contas/" class="w3-button w3-block w3-black">CONTAS</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/curriculo/" class="w3-button w3-block w3-black">CURRÍCULO</a>
+                  </div>
+                  <div class="w3-col s2">
+                     <a href="/restrito/" class="w3-button w3-block w3-black">RESTRITO</a>
+                  </div>
+                  <div class="align-login w3-col s2">
+                     <button class="btn btn-danger" style="padding-bottom:5px; border-radius:20px;">
+                        <a href="/login/" style="text-decoration: none;color:white;">Login</a>
+                     </button>
+                  </div>
+               </div>
+            </div>
+            
+            <!-- Header with image -->
+            <header class="bgimg w3-display-container w3-grayscale-min" id="home">
+               <div class="w3-center banner-menu">
+                  <span class="w3-text-white" style="font-size:90px;">Comércio Eletrônico</span>
+               </div>
+            </header>
+            
+            <!-- Footer -->
+            <footer class="w3-center">
+               <p><b>Powered by <a href="#" title="LocaUser" target="_blank" class="w3-hover-text-green">LocaUser</a></b></p>
+            </footer>
+         </div>
+      </form>
+   </body>
+</html>

@@ -1,0 +1,26 @@
+body{
+   font-family:'Arial';
+}
+
+.menu {
+   display: none;
+}
+
+.w3-button:hover {
+   text-decoration: none!important;
+   background-color: white!important;
+}
+
+.button-login {
+   padding-bottom:10px!important; 
+   border-radius:20px!important;
+}
+
+.navbar-btn {
+   padding-bottom:0!important;
+   margin-bottom:0!important;
+}
+
+.align-login{
+   padding-left: 380px!important;
+}
